@@ -67,9 +67,9 @@ public class Main {
                 "sp: spicy\n" +
                 "la: lamb\n" +
                 "hm: homemade");
-        Hamburger hamburger = null;
-
+        Hamburger hamburger = HamburgerFactory.createHamburger(scanner.nextLine());
         String choice="";
+       // HamburgerFactory.createHamburger(choice);
         while (!choice.equals("s")) {
             System.out.println("Choose from the following options:\n" +
                     "a: add topping\n" +
@@ -90,7 +90,7 @@ public class Main {
                 "ch: chips\n" +
                 "or: onion rings\n" +
                 "sa: salad\n" +
-                "fe: friedEgg");
-        return null;
+                "fe: fried egg");
+        return ToppingFactory.addTopping(hamburger,scanner.nextLine());
     }
 }
