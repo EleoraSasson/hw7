@@ -20,7 +20,7 @@ public class FileDetailsFactory {
         switch (getExtension(description)){
             case "":
                 matcher=getMatcher(DIRECTORY_CAPTURE_PATTERN, description);
-                return new DirectoryDetails(matcher.group(1), matcher.group(2));
+                //return new DirectoryDetails(matcher.group(1), matcher.group(2));
             case "mp3":
                 matcher=getMatcher(MP3_CAPTURE_PATTERN, description);
                 return new Mp3FileDetails(matcher.group(1), matcher.group(2),
